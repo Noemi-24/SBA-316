@@ -1,0 +1,22 @@
+body{
+    font-family:'Courier New', Courier, monospace;
+    background: #f4f4f4;
+}
+
+#app{
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+li{
+    cursor:pointer;
+    margin: 8px 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    color:gray;
+}
