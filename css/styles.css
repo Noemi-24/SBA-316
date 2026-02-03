@@ -1,43 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    font-family:'Courier New', Courier, monospace;
-    background: #f4f4f4;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #c9f1f3;
+    min-width: 100vh;
+    padding: 20px;
 }
 
 #container-app{
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(2, 125, 185);
     overflow: hidden;
     padding: 40px;
 }
 
-li{
-    cursor:pointer;
-    margin: 8px 0;
+/* Headder section */
+header h1{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.completed {
-    text-decoration: line-through;
-    color:gray;
+.subtitle{
+    font-size: 1.1em;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
 
 /* Form Section */
 .task-form-section {
     border-bottom: 1px solid #eee;
-    margin: auto;
-    padding-right: 25px;
+    margin: auto;    
 }
 
 .task-form-section h2 {
     font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 15px;
+    color: #495057;
+    margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .form-row {
@@ -51,9 +63,9 @@ li{
 
 label {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    color: #555;
+    color: #495057;
     margin-bottom: 5px;
 }
 
@@ -66,10 +78,10 @@ input[type="date"],
 select {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #dee2e6;
     border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.3s, box-shadow 0.2s;
 }
 
 input:focus,
@@ -80,9 +92,9 @@ select:focus {
 }
 
 /* Validation Styles */
-.form-group.error input,
+/* .form-group.error input,
 .form-group.error textarea {
-    border-color: #e53e3e;
+    border-color: #dc3545;
 }
 
 .form-group.error .error-message {
@@ -92,16 +104,17 @@ select:focus {
 .form-group.success input,
 .form-group.success textarea {
     border-color: #38a169;
-}
+} */
 
 .error-message {
-    display: none;
-    color: #e53e3e;
-    font-size: 0.8rem;
+    display: block;
+    color: #dc3545;
+    font-size: 0.9rem;
     margin-top: 5px;
+    min-height: 20px;
 }
 
-.char-count {
+/* .char-count {
     font-size: 0.75rem;
     color: #999;
     text-align: right;
@@ -114,11 +127,12 @@ select:focus {
 
 .char-count.danger {
     color: #e53e3e;
-}
+} */
 
 /* Task List */
 .task-list-section {
     min-height: 200px;
+    padding: 30px;
 }
 
 #task-list {
@@ -139,10 +153,13 @@ select:focus {
 /* Task Item */
 .task-item {
     display: flex;
-    align-items: flex-start;
-    padding: 20px 25px;
-    border-bottom: 1px solid #eee;
-    transition: background 0.2s;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 2p solid #e9ecef;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
 }
 
 .task-item:hover {
@@ -225,4 +242,38 @@ select:focus {
 .task-due-date.overdue {
     color: #e53e3e;
     font-weight: 600;
+}
+
+/* Submit button*/
+#add-task-btn{
+    width: 100%;
+    padding: 15px;
+    background: #c9f1f3;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor:pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#add-task-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px  rgba(2, 125, 185);
+}
+
+#add-task-btn:active{
+    transform: translateY(0);
+}
+
+/* Others*/
+
+li{
+    cursor:pointer;
+    margin: 8px 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    color:gray;
 }
