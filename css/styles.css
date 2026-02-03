@@ -3,12 +3,14 @@ body{
     background: #f4f4f4;
 }
 
-#app{
-    max-width: 400px;
-    margin: 50px auto;
+#container-app{
+    max-width: 600px;
+    margin: 0 auto;
     background: white;
-    padding: 20px;
-    border-radius: 8px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 40px;
 }
 
 li{
@@ -19,4 +21,208 @@ li{
 .completed {
     text-decoration: line-through;
     color:gray;
+}
+
+/* Form Section */
+.task-form-section {
+    border-bottom: 1px solid #eee;
+    margin: auto;
+    padding-right: 25px;
+}
+
+.task-form-section h2 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: #e53e3e;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Validation Styles */
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #e53e3e;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+.form-group.success input,
+.form-group.success textarea {
+    border-color: #38a169;
+}
+
+.error-message {
+    display: none;
+    color: #e53e3e;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.char-count {
+    font-size: 0.75rem;
+    color: #999;
+    text-align: right;
+    margin-top: 3px;
+}
+
+.char-count.warning {
+    color: #dd6b20;
+}
+
+.char-count.danger {
+    color: #e53e3e;
+}
+
+/* Task List */
+.task-list-section {
+    min-height: 200px;
+}
+
+#task-list {
+    list-style: none;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 50px 20px;
+    color: #999;
+    font-size: 1rem;
+}
+
+.empty-message.hidden {
+    display: none;
+}
+
+/* Task Item */
+.task-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 25px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.task-item:hover {
+    background: #f7fafc;
+}
+
+.task-item.completed {
+    opacity: 0.6;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-item.hidden {
+    display: none;
+}
+
+/* Checkbox */
+.task-checkbox {
+    margin-right: 15px;
+    padding-top: 3px;
+}
+
+.complete-checkbox {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: #667eea;
+}
+
+/* Task Content */
+.task-content {
+    flex: 1;
+    min-width: 0;
+}
+.task {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.task-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 0.75rem;
+}
+
+/* Priority Badges */
+.task-priority-badge {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.task-priority-badge.low {
+    background: #c6f6d5;
+    color: #276749;
+}
+
+.task-priority-badge.medium {
+    background: #fefcbf;
+    color: #975a16;
+}
+
+.task-priority-badge.high {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+/* Due Date */
+.task-due-date {
+    color: #888;
+}
+
+.task-due-date.overdue {
+    color: #e53e3e;
+    font-weight: 600;
 }
