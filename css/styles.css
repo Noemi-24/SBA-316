@@ -23,7 +23,7 @@ body{
 
 /* Headder section */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #67bed9 0%, #2596be 100%);
     color: white;
     padding: 40px 30px;
     text-align: center;
@@ -116,7 +116,6 @@ select:focus {
 .empty-message {
     text-align: center;
     padding: 50px 20px;
-    //color: #999;
     font-size: 1rem;
     color: #6c757d;
 }
@@ -169,7 +168,7 @@ select:focus {
     width: 22px;
     height: 22px;
     cursor: pointer;
-    accent-color: #667eea;
+    accent-color:  rgba(2, 125, 185);
 }
 .task-checkbox input {
     width: 20px;
@@ -242,7 +241,7 @@ select:focus {
 }
 
 .task-due-date.overdue {
-    //color: #e53e3e;
+    /* color: #e53e3e; */
     font-weight: 600;
     font-size: 0.9em;
     color: #6c757d;
@@ -293,13 +292,13 @@ select:focus {
 }
 
 .filter-btn:hover {
-    border-color: #667eea;
+    border-color: #67bed9;
     color: #667eea;
 }
 .filter-btn.active {
-    background: #667eea;
+    background: #67bed9;
     color: white;
-    border-color: #667eea;
+    border-color: rgba(2, 125, 185);
 }
 
 /*Buttons*/
@@ -335,18 +334,6 @@ select:focus {
 
 /* Others*/
 
-li{
-    cursor:pointer;
-    margin: 8px 0;
-}
-
-.completed {
-    text-decoration: line-through;
-    color:gray;
-}
-.required {
-    color: #e53e3e;
-}
 .task-actions {
     display: flex;
     gap: 10px;

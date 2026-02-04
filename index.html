@@ -9,7 +9,7 @@
     <body>
         <div id="container-app">
             <header>
-                <h1>📝 To-Do List</h1>
+                <h1>My To-Do List</h1>
                 <p class="subtitle">Stay organized, get things done!</p>
             </header>
 
@@ -27,7 +27,7 @@
                             maxlength="100"
                             placeholder="Enter new task..."
                         >
-                        <span id="error-message"></span>
+                        <span id="error-message" class="error-message"></span>
                     </div>
                 
                     <div class="form-row">
@@ -46,7 +46,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" id="add-task-btn"> Add Task</button>
+                    <button type="submit" id="add-task-btn">Add Task</button>
                 </form>
             </section>
             
@@ -54,7 +54,7 @@
             <section class="task-list-section">
                 <ul id="task-list"></ul>
                 <p id="empty-message" class="empty-message">
-                    No tasks yet. Add one above! ☝️
+                    No tasks yet!
                 </p>
             </section>
 
@@ -74,8 +74,8 @@
                         </div>
                     </div>
                     <div class="task-actions">
-                        <button class="btn-edit" title="Edit task">✏️ Edit</button>
-                        <button class="btn-delete" title="Delete task">🗑️ Delete</button>
+                        <button class="btn-edit" title="Edit task">Edit</button>
+                        <button class="btn-delete" title="Delete task">Delete</button>
                     </div>
                 </li>
             </template>            

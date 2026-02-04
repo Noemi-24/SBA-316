@@ -13,7 +13,7 @@ const dueDateInput = document.getElementById('task-due');
 const taskList = document.getElementById('task-list');
 const taskCount = document.querySelector('#task-count');
 const taskTemplate = document.getElementById('task-template');
-const errorMessage = document.querySelector('.error-message'); // ✅ CORREGIDO
+const errorMessage = document.querySelector('.error-message'); 
 const emptyMessage = document.getElementById('empty-message');
 const addTaskBtn = document.getElementById('add-task-btn');
 
@@ -99,6 +99,9 @@ taskForm.addEventListener('submit', (e) => {
 //========== Form Validation ==========
 function validateForm(taskText) {
     const text = taskText.trim();
+
+    if (!errorMessage) return false;
+
     if (text === "") {
         errorMessage.textContent = 'Task must be filled out';
         return false;        
@@ -160,6 +163,7 @@ function renderTask(task) {
         }
         
         saveTasks();
+        updateTaskCount();
     });
 
     //Event listener - Edit button
@@ -275,3 +279,4 @@ function filterByPriority(priority) {
 window.addEventListener('DOMContentLoaded', () => {
     createFilterButtons();
 });
+
