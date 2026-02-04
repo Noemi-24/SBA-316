@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>To-Do-List Manager</title>
+        <title>To-Do-List Manager - SBA 316</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <div id="container-app">
             <header>
-                <h1>To-Do List</h1>
-                <p class="subtitle">What needs to be done?</p>
+                <h1>📝 To-Do List</h1>
+                <p class="subtitle">Stay organized, get things done!</p>
             </header>
 
             <!-- Task Form -->
@@ -25,7 +25,7 @@
                             required 
                             minlength="3"
                             maxlength="100"
-                            placeholder="Enter new task"
+                            placeholder="Enter new task..."
                         >
                         <span id="error-message"></span>
                     </div>
@@ -58,7 +58,7 @@
                 </p>
             </section>
 
-            <p id="task-count">Total tasks: 0</p>
+            <p id="task-count">Total tasks: 0 | Completed: 0</p>
         
             <!-- Task Template (hidden) -->
             <template id="task-template">
@@ -74,8 +74,8 @@
                         </div>
                     </div>
                     <div class="task-actions">
-                        <button class="btn-edit" title="Edit task"> Edit</button>
-                        <button class="btn-delete" title="Delete task"> Delete</button>
+                        <button class="btn-edit" title="Edit task">✏️ Edit</button>
+                        <button class="btn-delete" title="Delete task">🗑️ Delete</button>
                     </div>
                 </li>
             </template>            
