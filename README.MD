@@ -32,26 +32,6 @@ This project demonstrates proficiency in:
 - **BOM** - localStorage and window events
 - **Template Elements** - Efficient rendering
 
-## 📋 SBA 316 Requirements Checklist
-
-| Requirement | Status | Implementation |
-|-------------|--------|----------------|
-| getElementById | ✅ | Multiple elements cached |
-| querySelector/querySelectorAll | ✅ | Used throughout |
-| Parent-child-sibling navigation | ✅ | Delete function uses parentNode, nextElementSibling |
-| Iterate over collection | ✅ | Filter function iterates all tasks |
-| createElement | ✅ | Filter buttons created dynamically |
-| appendChild/prepend | ✅ | Tasks added to list, filters prepended |
-| DocumentFragment/cloneNode | ✅ | Template cloning for tasks |
-| Modify innerHTML/textContent | ✅ | Task text and badges updated |
-| Modify style/classList | ✅ | Completed tasks styled, filter buttons |
-| Modify attributes | ✅ | data-editing attribute on submit button |
-| Event listeners (≥2) | ✅ | Submit, checkbox, edit, delete, filter |
-| BOM properties (≥2) | ✅ | localStorage, window.addEventListener |
-| HTML validation | ✅ | required, minlength, maxlength |
-| DOM event validation | ✅ | validateForm() function |
-| Git commits | ✅ | Frequent commits |
-| README | ✅ | This file |
 
 ## 🚀 How to Run
 
@@ -101,3 +81,4 @@ SBA 316: The Document Object Model
 02/03/2026
 
 ---
+
